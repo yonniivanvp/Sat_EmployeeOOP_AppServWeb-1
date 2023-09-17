@@ -59,6 +59,10 @@ try
     Console.Write("Ingresar Apellidos: ");
     hourlyEmployee.LastName = Console.ReadLine();
 
+    hourlyEmployee.BirthDate = dateObject;
+
+    hourlyEmployee.HiringDate = dateObject;
+
     hourlyEmployee.IsActive = true;
 
     Console.Write("Ingresar Las Horas Trabajadas: ");
@@ -70,26 +74,33 @@ try
     Console.WriteLine(hourlyEmployee.ToString());
 
 
-    CommissionEmployee commissionEmployee = new CommissionEmployee();
+    BaseCommissionEmployee baseCommissionEmployee = new BaseCommissionEmployee();
 
     Console.Write("\nIngresar Identificacion: ");
-    commissionEmployee.Id = int.Parse(Console.ReadLine());
+    baseCommissionEmployee.Id = int.Parse(Console.ReadLine());
 
     Console.Write("Ingresar Nombres: ");
-    commissionEmployee.FirstName = Console.ReadLine();
+    baseCommissionEmployee.FirstName = Console.ReadLine();
 
     Console.Write("Ingresar Apellidos: ");
-    commissionEmployee.LastName = Console.ReadLine();
+    baseCommissionEmployee.LastName = Console.ReadLine();
 
-    commissionEmployee.IsActive = true;
+    baseCommissionEmployee.BirthDate = dateObject;
+
+    baseCommissionEmployee.HiringDate = dateObject;
+
+    baseCommissionEmployee.IsActive = true;
 
     Console.Write("Ingresar Porcentaje de Comision: ");
-    commissionEmployee.CommisionPercentaje = int.Parse(Console.ReadLine());
+    baseCommissionEmployee.CommisionPercentaje = int.Parse(Console.ReadLine());
 
     Console.Write("Ingresar Valor De Venta: ");
-    commissionEmployee.Sales = decimal.Parse(Console.ReadLine());
+    baseCommissionEmployee.Sales = decimal.Parse(Console.ReadLine());
 
-    Console.WriteLine(commissionEmployee.ToString());
+    Console.Write("Ingresar Valor Base: ");
+    baseCommissionEmployee.Base = decimal.Parse(Console.ReadLine());
+
+    Console.WriteLine(baseCommissionEmployee.ToString());
 }
 catch (Exception ex)
 {
