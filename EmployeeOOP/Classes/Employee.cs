@@ -26,6 +26,17 @@ namespace EmployeeOOP.Classes
 
         public abstract decimal GetValueToPay();
 
+        public override string ToString()
+        {
+            return $"INFORMACION EMPLEADO \n\t " +
+                $"ID: {Id}\n\t" +
+                $"Nombres: {FirstName}\n\t" +
+                $"Apellidos: {LastName}\n\t" +
+                $"Fecha de Cumpleaños: {BirthDate}\n\t" +
+                $"Fecha de Contratacion: {HiringDate}\n\t" +
+                $"¿Empleado Activo?: {IsActive}\n\t";
+        }
+
         #endregion
     }
 }
