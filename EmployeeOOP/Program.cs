@@ -1,4 +1,5 @@
 ﻿using EmployeeOOP.Classes;
+using System.Runtime.InteropServices;
 
 try
 {
@@ -52,11 +53,13 @@ try
     Console.Write("\nIngresar Identificacion: ");
     hourlyEmployee.Id =int.Parse(Console.ReadLine());
 
-    Console.Write("\nIngresar Nombres: ");
+    Console.Write("Ingresar Nombres: ");
     hourlyEmployee.FirstName = Console.ReadLine();
 
     Console.Write("Ingresar Apellidos: ");
     hourlyEmployee.LastName = Console.ReadLine();
+
+    hourlyEmployee.IsActive = true;
 
     Console.Write("Ingresar Las Horas Trabajadas: ");
     hourlyEmployee.Hours = int.Parse(Console.ReadLine());
@@ -65,6 +68,28 @@ try
     hourlyEmployee.HoursValue = decimal.Parse(Console.ReadLine());
 
     Console.WriteLine(hourlyEmployee.ToString());
+
+
+    CommissionEmployee commissionEmployee = new CommissionEmployee();
+
+    Console.Write("\nIngresar Identificacion: ");
+    commissionEmployee.Id = int.Parse(Console.ReadLine());
+
+    Console.Write("Ingresar Nombres: ");
+    commissionEmployee.FirstName = Console.ReadLine();
+
+    Console.Write("Ingresar Apellidos: ");
+    commissionEmployee.LastName = Console.ReadLine();
+
+    commissionEmployee.IsActive = true;
+
+    Console.Write("Ingresar Porcentaje de Comision: ");
+    commissionEmployee.CommisionPercentaje = int.Parse(Console.ReadLine());
+
+    Console.Write("Ingresar Valor De Venta: ");
+    commissionEmployee.Sales = decimal.Parse(Console.ReadLine());
+
+    Console.WriteLine(commissionEmployee.ToString());
 }
 catch (Exception ex)
 {
